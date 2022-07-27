@@ -4,6 +4,7 @@ require('dotenv').config()
 
 const authRoutes = require('./routes/auth-routes')
 const stocksRoutes = require('./routes/stocks-routes')
+const optionRoutes = require('./routes/options-routes')
 // const foodRoutes = require('./routes/food-routes')
 
 
@@ -27,6 +28,8 @@ app.use((req, res, next) => {
 
 // app.use('/food', foodRoutes)
 app.use('/stocks', stocksRoutes)
+
+app.use('/options', optionRoutes)
 
 app.use('/', authRoutes)
 
